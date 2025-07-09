@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <math.h>
 
+// audio/video pattern:
+// 13 video segments 1001 ms duration: 13013 ms
+// 12 audio segments of 1002.666667 ms + 1 audio segment of 981.333333 ms: 13013.333337 ms
+
 #define VIDEO_FRAMERATE_NUMERATOR 30000
 #define VIDEO_FRAMERATE_DENOMINATOR 1001
 #define VIDEO_SEGMENT_LENGTH 1.001
