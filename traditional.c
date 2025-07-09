@@ -21,6 +21,8 @@
 
 int main(int argc, char **argv)
 {
+  const int duration = 86400; // seconds
+
   /* audio block length */
   double audio_blklen_ms = (double)AUDIO_BLOCK_LEN / AUDIO_SAMPLE_RATE * 1000;
 
@@ -43,7 +45,7 @@ int main(int argc, char **argv)
   double audio_time_ms = 0;
   double audio_dur_ms = 0;
 
-  for (int i = 0; i < 86400; i++) {
+  for (int i = 0; i < duration; i++) {
     video_time_ms += video_dur_ms;
     if (fabs(video_time_ms - (audio_time_ms + audio_short_len_ms)) < fabs(video_time_ms - (audio_time_ms + audio_long_len_ms))) {
       audio_dur_ms = audio_short_len_ms;
