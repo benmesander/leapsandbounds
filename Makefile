@@ -1,5 +1,5 @@
 traditional: traditional.c
-	gcc -lm  traditional.c -o traditional
+	gcc  traditional.c -lm -o traditional
 
 .PHONY: clean
 
